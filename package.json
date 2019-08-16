@@ -58,7 +58,7 @@
     "libchanged": "test -z \"$(git diff HEAD)\" || (git diff HEAD && false)",
     "lint": "eslint --ext .js,.ts .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run build",
+    "prepare": "npm run build --scripts-prepend-node-path",
     "start": "node example/app.js",
     "test": "mocha",
     "test:watch": "npm run test -- --watch"
